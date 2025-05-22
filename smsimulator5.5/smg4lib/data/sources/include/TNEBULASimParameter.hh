@@ -6,6 +6,7 @@
 #include "TNamed.h"
 #include "TVector3.h"
 #include <map>
+#include <iostream>
 
 class TNEBULASimParameter : public TSimParameter
 {
@@ -16,7 +17,7 @@ public:
   TDetectorSimParameter *FindDetectorSimParameter(Int_t id);
 
   virtual void Print(Option_t* option="") const;// interited from TNamed
-  friend ostream& operator<<(ostream& out,  const TNEBULASimParameter& prm);
+  friend std::ostream& operator<<(std::ostream& out,  const TNEBULASimParameter& prm);
 
 
 public:

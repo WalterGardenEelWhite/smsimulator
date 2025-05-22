@@ -6,6 +6,7 @@
 #include <TNamed.h>
 #include <TVector3.h>
 #include <TString.h>
+#include <iostream>
 
 #include "TSimParameter.hh"
 
@@ -15,7 +16,7 @@ public:
   TCATANACsISimParameter(TString name="CATANACsI");
   virtual ~TCATANACsISimParameter();
   virtual void Print(Option_t* option="") const;
-  friend ostream& operator<<(ostream&out, const TCATANACsISimParameter& prm);
+  friend std::ostream& operator<<(std::ostream&out, const TCATANACsISimParameter& prm);
 public:
   Int_t fID;
   Int_t fLayer;

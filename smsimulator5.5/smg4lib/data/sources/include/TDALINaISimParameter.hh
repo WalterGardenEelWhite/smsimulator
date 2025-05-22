@@ -6,6 +6,7 @@
 #include "TVector3.h"
 #include "TString.h"
 #include <vector>
+#include <iostream>
 
 class TDALINaISimParameter : public TSimParameter
 {
@@ -13,7 +14,7 @@ public:
   TDALINaISimParameter(TString name="");
   virtual ~TDALINaISimParameter();
   virtual void Print(Option_t* option="") const;// interited from TNamed
-  friend ostream& operator<<(ostream& out,  const TDALINaISimParameter& prm);
+  friend std::ostream& operator<<(std::ostream& out,  const TDALINaISimParameter& prm);
 
 public:
   Int_t    fID;

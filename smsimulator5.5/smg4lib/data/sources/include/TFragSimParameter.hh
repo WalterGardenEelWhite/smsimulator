@@ -4,6 +4,7 @@
 #include "TSimParameter.hh"
 #include "TNamed.h"
 #include "TVector3.h"
+#include <iostream>
 
 class TFragSimParameter : public TSimParameter
 {
@@ -11,7 +12,7 @@ public:
   TFragSimParameter(TString name="FragParameter");
   virtual ~TFragSimParameter();
   virtual void Print(Option_t* option="") const;// interited from TNamed
-  friend ostream& operator<<(ostream& out,  const TFragSimParameter& prm);
+  friend std::ostream& operator<<(std::ostream& out,  const TFragSimParameter& prm);
 
 public:
   TVector3 fTargetPosition;// position at Laboratory coordinate in mm
