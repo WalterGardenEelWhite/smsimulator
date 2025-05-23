@@ -106,18 +106,18 @@ int CATANASimDataConverter_TArtCATANACsI::ConvertSimData()
 
     if(fIncludeResolution){
       // Position
-      csi->SetPositionX(para->fPosition.X());
-      csi->SetPositionY(para->fPosition.Y());
-      csi->SetPositionZ(para->fPosition.Z());
+      csi->SetPosX(para->fPosition.X());
+      csi->SetPosY(para->fPosition.Y());
+      csi->SetPosZ(para->fPosition.Z());
       // Time
       csi->SetTime(gRandom->Gaus(data->t,para->fTimeResolution));
       // Energy
       csi->SetEnergy(tmpe);
     }
     else{
-      csi->SetPositionX(data->pos.X());
-      csi->SetPositionY(data->pos.Y());
-      csi->SetPositionZ(data->pos.Z());
+      csi->SetPosX(data->pos.X());
+      csi->SetPosY(data->pos.Y());
+      csi->SetPosZ(data->pos.Z());
       csi->SetTime(data->t);
       csi->SetEnergy(data->e);
     }
